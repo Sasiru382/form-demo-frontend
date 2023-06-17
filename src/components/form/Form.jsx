@@ -26,7 +26,20 @@ function Form() {
           console.log(query);
           const addData = async () => {
             try {
-              const result = await axios.post(`${import.meta.env.VITE_API_URL_POST}`, query);
+
+              let config = {
+                method: 'post',
+                url: 'https://demo-backend-form.azurewebsites.net/insert',
+                headers: { 
+                  'Content-Type': 'application/json',
+                  'Access-Control-Allow-Origin': 'https://jolly-flower-00d344710.3.azurestaticapps.net'
+                },
+                data : data
+              };
+              
+              
+              const result = axios.request(config)
+              //const result = await axios.post(`${import.meta.env.VITE_API_URL_POST}`, query);
               console.log("request : ",result.status);
             } catch (error) {
               console.log('Error when posting:', error);
