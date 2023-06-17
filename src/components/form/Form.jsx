@@ -38,7 +38,7 @@ function Form() {
               };
               
               
-              const result = axios.request(config)
+              const result = await axios.request(config)
               //const result = await axios.post(`${import.meta.env.VITE_API_URL_POST}`, query);
               console.log("request : ",result.status);
             } catch (error) {
