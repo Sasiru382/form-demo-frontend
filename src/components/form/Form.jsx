@@ -32,7 +32,9 @@ function Form() {
                 url: 'https://demo-backend-form.azurewebsites.net/insert',
                 headers: { 
                   'Content-Type': 'application/json',
-                  'Access-Control-Allow-Origin': '*'
+                  'Access-Control-Allow-Origin': 'https://jolly-flower-00d344710.3.azurestaticapps.net',
+                  'Access-Control-Allow-Methods': 'POST',
+                  'Access-Control-Allow-Headers': 'Content-Type, Authorization'
                 },
                 data : query
               };
