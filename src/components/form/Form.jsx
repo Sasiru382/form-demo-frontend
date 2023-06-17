@@ -34,7 +34,7 @@ function Form() {
                   'Content-Type': 'application/json',
                   'Access-Control-Allow-Origin': 'https://jolly-flower-00d344710.3.azurestaticapps.net'
                 },
-                data : data
+                data : query
               };
               
               
